@@ -45,7 +45,7 @@ local function check_player(player)
 	local node = minetest.get_node(player:get_pos())
 	if node.name == "ban_blocks:kick" then
 		minetest.log("action", "player " .. playername .. " entered a kick-block")
-		minetest.kick_player(playername)
+		minetest.kick_player(playername,"You entered a kick block!")
 
 	elseif node.name == "ban_blocks:ban" and has_xban_mod then
 		minetest.log("action", "player " .. playername .. " entered a ban-block")
